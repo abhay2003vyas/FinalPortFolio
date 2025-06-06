@@ -14,15 +14,18 @@ function Contact() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
     try {
-      await axios.post("http://localhost:5000/api/submit", formData);
-    } catch {
-      console.log("error");
+      await axios.post(
+        "https://finalportfolio-xzjo.onrender.com/api/submit",
+        formData
+      );
       toast.success("✅ Thank you! Your message has been sent.");
+    } catch (error) {
+      console.log("error", error);
+      toast.error("❌ Something went wrong. Please try again.");
     }
     setFormData({
       name: "",
@@ -34,7 +37,7 @@ function Contact() {
   return (
     <Container fluid className="contact-section" id="contact">
       <ToastContainer position="top-center" autoClose={3000} />
-      
+
       <Container className="contact-form-container">
         <Row className="justify-content-center">
           <Col md={6}>
