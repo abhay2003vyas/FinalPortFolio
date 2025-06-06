@@ -16,8 +16,8 @@ app.use("/api", router);
 // Database connection
 mongoose
   .connect(
-    "mongodb+srv://abhay:abhay12345@cluster0.l8ty0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    // "mongodb+srv://abhay:sjdd3rtet8dsuh@cluster0.l8ty0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    //"mongodb+srv://abhay:abhay12345@cluster0.l8ty0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://abhay:sjdd3rtet8dsuh@cluster0.l8ty0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
